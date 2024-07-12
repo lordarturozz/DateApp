@@ -10,4 +10,5 @@
 
     <color name="colorPrimary">#890620</color>
     <color name="colorSecondary">#660115</color>
+    <color name="colorActivityLogin">#D53B67</color>
 </resources>

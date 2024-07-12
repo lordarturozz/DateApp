@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">899218427566</string>
+    <string name="google_api_key" translatable="false">AIzaSyC6FBLywpBajAEjiGMlYEg7QdsA3Q1Q8e0</string>
+    <string name="google_app_id" translatable="false">1:899218427566:android:4051d636409c20640f273f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC6FBLywpBajAEjiGMlYEg7QdsA3Q1Q8e0</string>
+    <string name="google_storage_bucket" translatable="false">dateapp-bc364.appspot.com</string>
+    <string name="project_id" translatable="false">dateapp-bc364</string>
+</resources>
