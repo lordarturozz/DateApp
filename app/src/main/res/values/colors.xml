@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Red Colors -->
+    <color name="colorPrimary">#890620</color>  <!-- Primary Red -->
+    <color name="colorPrimaryVariant">#660115</color>  <!-- Darker Red for Variants -->
+
+    <!-- White Colors -->
+    <color name="colorOnPrimary">#FFFFFFFF</color>  <!-- Text Color on Primary Red -->
+    <color name="colorSecondary">#FFFFFF</color>  <!-- Secondary White -->
+    <color name="colorOnSecondary">#000000</color>  <!-- Text Color on Secondary White -->
+
+    <!-- Background and Surface Colors -->
+    <color name="colorBackground">#FFFFFF</color>  <!-- White Background -->
+    <color name="colorOnBackground">#000000</color>  <!-- Text Color on Background -->
+    <color name="colorSurface">#FFFFFF</color>  <!-- White Surface -->
+    <color name="colorOnSurface">#000000</color>  <!-- Text Color on Surface -->
+
+    <!-- Error Colors -->
+    <color name="colorError">#B00020</color>  <!-- Error Color -->
+    <color name="colorOnError">#FFFFFF</color>  <!-- Text Color on Error -->
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,8 +26,4 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="colorPrimary">#890620</color>
-    <color name="colorSecondary">#660115</color>
-    <color name="colorActivityLogin">#D53B67</color>
 </resources>

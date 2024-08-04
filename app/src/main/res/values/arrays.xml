@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="countries_array">
+        <item>España</item>
+        <item>México</item>
+        <item>Argentina</item>
+        <item>Estados Unidos</item>
+    </array>
+
+    <array name="cities_array">
+        <!-- Cities will be populated dynamically based on the selected country -->
+    </array>
+</resources>

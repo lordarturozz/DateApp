@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "899218427566",
-    "project_id": "dateapp-bc364",
-    "storage_bucket": "dateapp-bc364.appspot.com"
+    "project_number": "225377023973",
+    "project_id": "dateapp-fa780",
+    "storage_bucket": "dateapp-fa780.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:899218427566:android:4051d636409c20640f273f",
+        "mobilesdk_app_id": "1:225377023973:android:b5d0865aa6f27bce9e610c",
         "android_client_info": {
           "package_name": "com.example.dateapp"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC6FBLywpBajAEjiGMlYEg7QdsA3Q1Q8e0"
+          "current_key": "AIzaSyDdOD8VsOa-w-39zQXZBDjE2HNKY2YHiWI"
         }
       ],
       "services": {

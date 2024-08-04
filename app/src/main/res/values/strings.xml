@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">DateApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header_title">Déjanos conocerte</string>
+    <string name="header_subtitle">Por favor introduce todos los datos para continuar</string>
+    <string name="upload_photo">Sube tu foto</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_email">Correo Electrónico</string>
+    <string name="hint_number">Número de Teléfono</string>
+    <string name="hint_city">Ciudad</string>
+    <string name="terms_conditions">Aceptar términos y condiciones de la aplicación</string>
+    <string name="register">Registrarse</string>
+    <string name="dating" translatable="false">Dating</string>
+    <string name="message" translatable="false">Message</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>

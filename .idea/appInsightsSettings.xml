@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.dateapp" />
-                  <option name="mobileSdkAppId" value="1:899218427566:android:4051d636409c20640f273f" />
-                  <option name="projectId" value="dateapp-bc364" />
-                  <option name="projectNumber" value="899218427566" />
+                  <option name="mobileSdkAppId" value="1:225377023973:android:b5d0865aa6f27bce9e610c" />
+                  <option name="projectId" value="dateapp-fa780" />
+                  <option name="projectNumber" value="225377023973" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
