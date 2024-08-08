@@ -58,6 +58,7 @@ android {
 }
 
 dependencies {
+    implementation("com.github.yuyakaido:CardStackView:2.3.4")
     // Glide dependencies
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation(libs.androidx.media3.common)

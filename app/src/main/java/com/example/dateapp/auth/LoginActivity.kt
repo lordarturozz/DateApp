@@ -48,6 +48,7 @@ class LoginActivity : AppCompatActivity() {
                 binding.password.error = "Por favor introduce tu contraseña"
             } else {
                 loginUser(email, password)
+                //startActivity(Intent(this, MainActivity::class.java))
             }
         }
 
@@ -72,9 +73,18 @@ class LoginActivity : AppCompatActivity() {
                 dialog.dismiss()
                 if (task.isSuccessful) {
                     checkUserExist()
+                    startActivity(Intent(this, MainActivity::class.java))
                 } else {
-                    Log.e("LoginActivity", "Login failed: ${task.exception?.message}", task.exception)
-                    Toast.makeText(this, "Login failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    Log.e(
+                        "LoginActivity",
+                        "Login failed: ${task.exception?.message}",
+                        task.exception
+                    )
+                    Toast.makeText(
+                        this,
+                        "Login failed: ${task.exception?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
@@ -87,37 +97,57 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, RegisterActivity::class.java))
-                    finish()
+
                 } else {
-                    Log.e("LoginActivity", "Registration failed: ${task.exception?.message}", task.exception)
-                    Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    //startActivity(Intent(this, LoginActivity::class.java))
+                    //finish()
+
+                    Log.e(
+                        "LoginActivity",
+                        "Registration failed: ${task.exception?.message}",
+                        task.exception
+                    )
+                    Toast.makeText(
+                        this,
+                        "Registration failed: ${task.exception?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
 
     private fun checkUserExist() {
         val userId = auth.currentUser?.uid ?: return
-        FirebaseDatabase.getInstance().getReference("users").child(userId)
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    dialog.dismiss()
-                    if (snapshot.exists()) {
-                        startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
-                    } else {
-                        // Redirige a una actividad de registro adicional si es necesario
-                    }
-                    finish()
-                }
+        val userRef = FirebaseDatabase.getInstance().getReference("users").child(userId)
 
-                override fun onCancelled(error: DatabaseError) {
-                    dialog.dismiss()
-                    Log.e("LoginActivity", "Database error: ${error.message}", error.toException())
-                    Toast.makeText(this@LoginActivity, "Database error: ${error.message}", Toast.LENGTH_SHORT).show()
+        dialog.show()
+        userRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                dialog.dismiss()
+                if (snapshot.exists()) {
+                    val name = snapshot.child("name").getValue(String::class.java)
+                    val phone = snapshot.child("phone").getValue(String::class.java)
+                    val photo = snapshot.child("photo").getValue(String::class.java)
+
+                    if (!name.isNullOrEmpty() && !phone.isNullOrEmpty() && !photo.isNullOrEmpty()) {
+                        startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+                    }
                 }
-            })
+                finish()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                dialog.dismiss()
+                Log.e("LoginActivity", "Database error: ${error.message}", error.toException())
+                Toast.makeText(
+                    this@LoginActivity,
+                    "Database error: ${error.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
     }
 }
-
 
 
 

@@ -49,10 +49,11 @@ class RegisterActivity : AppCompatActivity() {
         // Verificar si el usuario está autenticado
         val currentUser = FirebaseAuth.getInstance().currentUser
         if (currentUser == null) {
-            startActivity(Intent(this, LoginActivity::class.java))
+            //startActivity(Intent(this, LoginActivity::class.java))
             finish()
             return
-        }
+        } else
+            startActivity(Intent(this, MainActivity::class.java))
 
         dialog = AlertDialog.Builder(this)
             .setView(R.layout.loading_layout)

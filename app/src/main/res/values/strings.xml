@@ -16,4 +16,5 @@
     <string name="profile" translatable="false">Profile</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="cardStackView">Card Stack View</string>
 </resources>
